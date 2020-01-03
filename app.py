@@ -5,8 +5,6 @@ app = Flask(__name__)
 
 @app.route('/hello/<name>')
 def page(name: str):
-    if name.lower().startswith('j'):
-        return jsonify({'hello': 'j-dog'})
     return jsonify({'hello': name})
 
 
